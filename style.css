@@ -302,6 +302,7 @@ section { padding: 64px 0; }
 .category-hsp    { background: var(--hsp-light);   border: 2px solid #c5d9cb; }
 .category-beauty { background: var(--beauty-light); border: 2px solid #f0c4d1; }
 .category-cafe   { background: var(--cafe-light);   border: 2px solid #e5d0bb; }
+.category-susume { background: #fff3e0;             border: 2px solid #ffcc80; }
 
 .category-emoji { font-size: 40px; display: block; margin-bottom: 12px; }
 
