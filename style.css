@@ -1,0 +1,592 @@
+/* ===== リセット & 基本 ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:      #5a9e6f;
+  --green-light:#e8f4ed;
+  --green-dark: #3d7a52;
+  --hsp:        #7b9e87;
+  --hsp-light:  #eaf2ec;
+  --beauty:     #d4829a;
+  --beauty-light:#faedf1;
+  --cafe:       #a07850;
+  --cafe-light: #f5ede3;
+  --cream:      #faf8f4;
+  --white:      #ffffff;
+  --text:       #2c2c2c;
+  --text-sub:   #666666;
+  --border:     #e5e5e5;
+  --shadow:     0 2px 12px rgba(0,0,0,0.08);
+  --radius:     12px;
+  --font-sans:  'Noto Sans JP', sans-serif;
+  --font-serif: 'Noto Serif JP', serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== ヘッダー ===== */
+.header {
+  background: var(--white);
+  border-bottom: 2px solid var(--green-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-cat { font-size: 32px; }
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.2;
+}
+
+.logo-sub {
+  font-size: 11px;
+  color: var(--text-sub);
+}
+
+.nav ul {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav a {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  background: linear-gradient(135deg, #edf7f0 0%, #faf8f4 60%, #faedf1 100%);
+  padding: 80px 24px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text { flex: 1; }
+
+.hero-label {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.4;
+  color: var(--green-dark);
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: var(--text-sub);
+  margin-bottom: 32px;
+  line-height: 1.9;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(90,158,111,0.35);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.hero-cat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 48px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--green-light);
+}
+
+.cat-icon { font-size: 72px; margin-bottom: 12px; }
+
+.kotaro-photo { width: 200px; height: 200px; object-fit: cover; object-position: center 20%; border-radius: 50%; margin-bottom: 12px; display: block; margin-left: auto; margin-right: auto; border: 4px solid var(--green-light); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+
+.cat-illustration { width: 160px; height: 176px; margin-bottom: 12px; display: block; margin-left: auto; margin-right: auto; }
+
+.cat-name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.cat-desc { font-size: 13px; color: var(--text-sub); }
+
+/* ===== プロフィール帯 ===== */
+.profile-band {
+  background: var(--green);
+  color: white;
+  padding: 24px;
+}
+
+.profile-band-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-icon { font-size: 36px; flex-shrink: 0; }
+
+.profile-band-inner > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.profile-band-inner p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.profile-band-note {
+  font-size: 12px;
+  opacity: 0.82;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-outline:hover { background: rgba(255,255,255,0.2); }
+
+/* ===== セクション共通 ===== */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--green-light);
+}
+
+.section-desc {
+  color: var(--text-sub);
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+section { padding: 64px 0; }
+
+.bg-light { background: var(--green-light); }
+
+/* ===== カテゴリーグリッド ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.category-card {
+  border-radius: var(--radius);
+  padding: 36px 24px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.category-health { background: var(--green-light); border: 2px solid #c5e3cf; }
+.category-hsp    { background: var(--hsp-light);   border: 2px solid #c5d9cb; }
+.category-beauty { background: var(--beauty-light); border: 2px solid #f0c4d1; }
+.category-cafe   { background: var(--cafe-light);   border: 2px solid #e5d0bb; }
+
+.category-emoji { font-size: 40px; display: block; margin-bottom: 12px; }
+
+.category-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.category-card p {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+/* ===== 記事グリッド ===== */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.article-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.article-img {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+}
+
+.article-img-health { background: var(--green-light); }
+.article-img-hsp    { background: var(--hsp-light); }
+.article-img-beauty { background: var(--beauty-light); }
+.article-img-cafe   { background: var(--cafe-light); }
+
+.article-body { padding: 20px; }
+
+.article-body h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 8px 0 10px;
+  line-height: 1.5;
+}
+
+.article-body h3 a:hover { color: var(--green); }
+
+.article-body p {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+.read-more {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.read-more:hover { color: var(--green-dark); }
+
+/* ===== タグ ===== */
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.tag-health { background: var(--green-light); color: var(--green-dark); }
+.tag-hsp    { background: var(--hsp-light); color: #3d6b4a; }
+.tag-beauty { background: var(--beauty-light); color: #9e4a66; }
+.tag-cafe   { background: var(--cafe-light); color: #7a5830; }
+.tag-susume { background: #fff3e0; color: #e65100; }
+
+/* ===== おすすめ商品 ===== */
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.pick-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pick-img {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  background: var(--cream);
+}
+
+.pick-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pick-body h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.pick-body p {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.btn-affiliate {
+  display: inline-block;
+  background: #ff9900;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-affiliate:hover {
+  background: #e68a00;
+  transform: translateY(-1px);
+}
+
+/* ===== カテゴリー別セクション ===== */
+.cat-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid;
+  font-size: 28px;
+}
+
+.cat-header-health { border-color: var(--green); }
+.cat-header-hsp    { border-color: var(--hsp); }
+.cat-header-beauty { border-color: var(--beauty); }
+.cat-header-cafe   { border-color: var(--cafe); }
+
+.cat-section-header h2 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.article-list { display: flex; flex-direction: column; gap: 0; }
+
+.article-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+  border-radius: 6px;
+  padding-left: 8px;
+}
+
+.article-list-item:hover { background: var(--green-light); }
+
+.article-list-title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.article-list-date {
+  font-size: 12px;
+  color: var(--text-sub);
+  white-space: nowrap;
+}
+
+/* ===== フッター ===== */
+.footer {
+  background: #2c3e30;
+  color: rgba(255,255,255,0.85);
+  padding: 48px 24px 32px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover { color: white; }
+
+.footer-note {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  max-width: 500px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 900px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+  .article-grid  { grid-template-columns: repeat(2, 1fr); }
+  .picks-grid    { grid-template-columns: repeat(2, 1fr); }
+  .hero-inner    { flex-direction: column; text-align: center; }
+  .hero-image    { order: -1; }
+}
+
+@media (max-width: 640px) {
+  .nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: white; border-bottom: 2px solid var(--green-light); padding: 16px; }
+  .nav.open { display: block; }
+  .nav ul   { flex-direction: column; gap: 8px; }
+  .nav-toggle { display: block; }
+  .category-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .article-grid  { grid-template-columns: 1fr; }
+  .picks-grid    { grid-template-columns: 1fr; }
+  .logo-title    { font-size: 15px; }
+  .hero          { padding: 48px 16px; }
+  section        { padding: 48px 0; }
+}

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="faceGrad" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FDDBA0"/>
+      <stop offset="100%" stop-color="#F5A94E"/>
+    </radialGradient>
+    <clipPath id="faceClip">
+      <circle cx="100" cy="112" r="74"/>
+    </clipPath>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="100" height="200"/>
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="100" y="0" width="100" height="200"/>
+    </clipPath>
+  </defs>
+
+  <!-- 耳（左・茶） -->
+  <path d="M44,88 L52,44 L82,86" fill="#E8944A"/>
+  <!-- 耳（右・茶） -->
+  <path d="M118,86 L148,44 L156,88" fill="#E8944A"/>
+  <!-- 耳内側ピンク（左） -->
+  <path d="M51,82 L57,52 L76,82" fill="#F4B8C8" opacity="0.85"/>
+  <!-- 耳内側ピンク（右） -->
+  <path d="M124,82 L143,52 L149,82" fill="#F4B8C8" opacity="0.85"/>
+
+  <!-- 顔ベース（オレンジ） -->
+  <circle cx="100" cy="112" r="74" fill="url(#faceGrad)"/>
+
+  <!-- ===はちわれ=== -->
+  <!-- 右半分（茶色）はそのまま -->
+  <!-- 左半分（白）をクリップで描く -->
+  <ellipse cx="80" cy="90" rx="52" ry="58" fill="#F5F0E8" clip-path="url(#leftHalf)"/>
+
+  <!-- 白と茶の境界線（自然なカーブ） -->
+  <path d="M100,44 Q96,72 98,112 Q99,140 100,168"
+        stroke="#E8A870" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- 白い口元・あご（両側共通） -->
+  <ellipse cx="100" cy="146" rx="38" ry="26" fill="#FFF8EE"/>
+
+  <!-- 目（左） -->
+  <circle cx="74" cy="106" r="13" fill="#1C1C1C"/>
+  <circle cx="74" cy="106" r="10.5" fill="#5A8A58"/>
+  <ellipse cx="74" cy="107" rx="4.5" ry="7.5" fill="#111"/>
+  <circle cx="78" cy="101" r="3.5" fill="white" opacity="0.95"/>
+  <circle cx="70" cy="111" r="1.8" fill="white" opacity="0.5"/>
+
+  <!-- 目（右） -->
+  <circle cx="126" cy="106" r="13" fill="#1C1C1C"/>
+  <circle cx="126" cy="106" r="10.5" fill="#5A8A58"/>
+  <ellipse cx="126" cy="107" rx="4.5" ry="7.5" fill="#111"/>
+  <circle cx="130" cy="101" r="3.5" fill="white" opacity="0.95"/>
+  <circle cx="122" cy="111" r="1.8" fill="white" opacity="0.5"/>
+
+  <!-- 鼻 -->
+  <path d="M93,136 Q100,131 107,136 Q100,143 93,136Z" fill="#EFA0B0"/>
+
+  <!-- 人中 -->
+  <line x1="100" y1="143" x2="100" y2="150" stroke="#D4A0A8" stroke-width="1.6"/>
+  <!-- 口 -->
+  <path d="M87,150 Q100,159 113,150" stroke="#D4A0A8" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- ひげ（左） -->
+  <line x1="20" y1="134" x2="86" y2="138" stroke="#C8C0B0" stroke-width="1.5"/>
+  <line x1="18" y1="144" x2="86" y2="144" stroke="#C8C0B0" stroke-width="1.5"/>
+  <line x1="22" y1="154" x2="86" y2="150" stroke="#C8C0B0" stroke-width="1.5"/>
+  <!-- ひげ（右） -->
+  <line x1="114" y1="138" x2="180" y2="134" stroke="#C8C0B0" stroke-width="1.5"/>
+  <line x1="114" y1="144" x2="182" y2="144" stroke="#C8C0B0" stroke-width="1.5"/>
+  <line x1="114" y1="150" x2="178" y2="154" stroke="#C8C0B0" stroke-width="1.5"/>
+</svg>
