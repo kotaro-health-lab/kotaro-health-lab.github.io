@@ -147,6 +147,27 @@
   font-size: 15px;
 }
 
+/* やさしい気遣いボックス（胃にやさしく等） */
+.gentle-care-box {
+  background: #fff0f0;
+  border: 2px solid #f5b3b3;
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 32px 0;
+}
+
+.gentle-care-box h2 {
+  margin-top: 0 !important;
+  color: #c97070;
+  border-left: none !important;
+  padding-left: 0 !important;
+  font-size: 1.25rem;
+}
+
+.gentle-care-box ul.check-list {
+  margin-bottom: 0;
+}
+
 /* 免責事項 */
 .disclaimer-box {
   background: #fff3f3;
