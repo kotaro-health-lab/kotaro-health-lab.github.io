@@ -147,24 +147,34 @@
   font-size: 15px;
 }
 
-/* やさしい気遣いボックス（胃にやさしく等）—— 鉛筆テクスチャ風モスグリーン */
+/* やさしい気遣いボックス（胃にやさしく等）—— 手描き鉛筆ハッチング風 */
 .gentle-care-box {
-  background-color: #ecf2dc;
+  background-color: transparent;
   background-image:
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.55  0 0 0 0 0.35  0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),
-    repeating-linear-gradient(135deg, rgba(140, 165, 110, 0.06) 0px, rgba(140, 165, 110, 0.06) 1px, transparent 1px, transparent 7px);
-  border: 2px solid #b8c89e;
-  border-radius: var(--radius);
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' seed='5'/><feColorMatrix values='0 0 0 0 0.55  0 0 0 0 0.75  0 0 0 0 0.4  0 0 0 0.22 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),
+    repeating-linear-gradient(118deg,
+      rgba(140, 195, 95, 0) 0px,
+      rgba(140, 195, 95, 0.22) 2px,
+      rgba(155, 200, 100, 0.18) 4px,
+      rgba(140, 195, 95, 0) 9px,
+      rgba(140, 195, 95, 0) 14px),
+    repeating-linear-gradient(132deg,
+      rgba(120, 180, 80, 0) 0px,
+      rgba(120, 180, 80, 0.14) 1px,
+      rgba(120, 180, 80, 0) 6px);
+  border: none;
+  border-radius: 0;
   padding: 24px 28px;
   margin: 32px 0;
 }
 
 .gentle-care-box h2 {
   margin-top: 0 !important;
-  color: #6b8052;
+  color: #4a6638;
   border-left: none !important;
   padding-left: 0 !important;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  background: transparent !important;
 }
 
 .gentle-care-box ul.check-list {
