@@ -143,7 +143,7 @@ img { max-width: 100%; }
 .hero-inner.hero-stacked {
   flex-direction: column;
   text-align: center;
-  gap: 28px;
+  gap: 0;
   max-width: 720px;
 }
 
@@ -157,13 +157,13 @@ img { max-width: 100%; }
 }
 
 .hero-top h1 {
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
-.hero-avatar {
+.hero-stacked .hero-avatar {
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0 0 28px;
 }
 
 .kotaro-photo-circle {
