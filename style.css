@@ -133,6 +133,41 @@ img { max-width: 100%; }
   gap: 60px;
 }
 
+.hero-inner.hero-centered {
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+  max-width: 720px;
+}
+
+.hero-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.kotaro-photo-circle {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+  display: block;
+}
+
+.hero-centered .cat-name {
+  margin: 4px 0 8px;
+}
+
+.cat-desc-inline {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-sub);
+}
+
 .hero-text { flex: 1; }
 
 .hero-label {
@@ -584,10 +619,26 @@ section { padding: 64px 0; }
   .nav.open { display: block; }
   .nav ul   { flex-direction: column; gap: 8px; }
   .nav-toggle { display: block; }
-  .category-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .article-grid  { grid-template-columns: 1fr; }
+  .category-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .article-grid  { grid-template-columns: 1fr; gap: 10px; }
   .picks-grid    { grid-template-columns: 1fr; }
   .logo-title    { font-size: 15px; }
   .hero          { padding: 48px 16px; }
   section        { padding: 48px 0; }
+
+  /* カテゴリーカード：コンパクト化 */
+  .category-card { padding: 16px 12px; }
+  .category-emoji { font-size: 28px; margin-bottom: 6px; }
+  .category-card h3 { font-size: 14px; margin-bottom: 4px; }
+  .category-card p { display: none; }
+
+  /* 新着記事カード：横並びリスト化（画像左・テキスト右） */
+  .article-card { display: flex; align-items: stretch; }
+  .article-img  { width: 92px; height: auto; min-height: 92px; flex-shrink: 0; font-size: 36px; }
+  .article-body { padding: 12px 14px; flex: 1; min-width: 0; }
+  .article-body h3 { font-size: 14px; margin: 6px 0 6px; -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+  .article-body p { display: none; }
+  .article-body .tag { font-size: 10px; padding: 2px 8px; }
+  .article-meta { font-size: 11px; margin-top: 4px; }
+  .article-meta .read-more { display: none; }
 }

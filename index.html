@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="臨床検査技師おこちゃんが、健康・ウェルネス・HSP・美容・カフェについて信頼性の高い情報をお届けするブログです。">
+  <!-- カフェ・グルメ復活時：description に「・カフェ」を戻す -->
+  <meta name="description" content="臨床検査技師おこちゃんが、健康・ウェルネス・HSP・美容について信頼性の高い情報をお届けするブログです。">
   <title>こたろうの健康研究所</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +27,8 @@
           <li><a href="#health">健康・ウェルネス</a></li>
           <li><a href="#hsp">HSP・メンタル</a></li>
           <li><a href="#beauty">美容・ボディケア</a></li>
-          <li><a href="#cafe">カフェ・グルメ</a></li>
+          <!-- カフェ・グルメ：記事を書き始めたら下の行を有効化 -->
+          <!-- <li><a href="#cafe">カフェ・グルメ</a></li> -->
           <li><a href="#susume">〇〇のススメ</a></li>
           <li><a href="about.html">プロフィール</a></li>
         </ul>
@@ -37,19 +39,17 @@
 
   <!-- ヒーロー -->
   <section class="hero">
-    <div class="hero-inner">
+    <div class="hero-inner hero-centered">
+      <div class="hero-avatar">
+        <img src="images/kotaro-tent.jpg" alt="小太郎" class="kotaro-photo-circle">
+      </div>
       <div class="hero-text">
         <p class="hero-label">臨床検査技師による信頼の健康情報</p>
         <h1>からだとこころを<br>もっと大切に</h1>
-        <p class="hero-desc">健康・HSP・美容・カフェ——<br>猫の小太郎くんの名を冠したこのブログで、<br>あなたの毎日に寄り添う情報をお届けします。</p>
+        <p class="cat-name">小太郎 <span class="cat-desc-inline">— このブログの守り猫</span></p>
+        <!-- カフェ・グルメ復活時：「健康・HSP・美容・カフェ——」に戻す -->
+        <p class="hero-desc">健康・HSP・美容——<br>猫の小太郎くんの名を冠したこのブログで、<br>あなたの毎日に寄り添う情報をお届けします。</p>
         <a href="#articles" class="btn-primary">記事を読む</a>
-      </div>
-      <div class="hero-image">
-        <div class="hero-cat-card">
-          <img src="images/kotaro-tent.jpg" alt="小太郎" class="kotaro-photo">
-          <p class="cat-name">小太郎</p>
-          <p class="cat-desc">このブログの守り猫</p>
-        </div>
       </div>
     </div>
   </section>
@@ -86,11 +86,15 @@
           <h3>美容・ボディケア</h3>
           <p>腸活・ヨーグルト・ヨガグッズなど、からだの外と内を整える</p>
         </a>
+        <!-- カフェ・グルメ：記事を書き始めたらコメント解除 -->
+        <!--
         <a href="#cafe" class="category-card category-cafe">
           <span class="category-emoji">☕</span>
           <h3>カフェ・グルメ</h3>
           <p>カフェ巡りの記録と、おうちで楽しめる食品・ドリンクの紹介</p>
         </a>
+        -->
+
         <a href="#susume" class="category-card category-susume">
           <span class="category-emoji">🥕</span>
           <h3>〇〇のススメ</h3>
@@ -105,6 +109,19 @@
     <div class="container">
       <h2 class="section-title">新着記事</h2>
       <div class="article-grid">
+
+        <article class="article-card">
+          <div class="article-img" style="background:#fbe9d6;font-size:48px;">🍂</div>
+          <div class="article-body">
+            <span class="tag tag-susume">🍂 食材のススメ</span>
+            <h3><a href="articles/cinnamon-benefits.html">シナモンのススメ｜甘い香りに隠された、スパイスの抗酸化パワー</a></h3>
+            <p>ポリフェノールが豊富で、スパイスの中でも抗酸化力が高いシナモン。抗炎症・血行促進・夏のエアコン冷え対策まで、安心して楽しむコツを解説します。</p>
+            <div class="article-meta">
+              <span>2026.05.24</span>
+              <a href="articles/cinnamon-benefits.html" class="read-more">続きを読む →</a>
+            </div>
+          </div>
+        </article>
 
         <article class="article-card">
           <div class="article-img" style="background:#e8f5e9;font-size:48px;">🥦</div>
@@ -314,6 +331,11 @@
           <span class="tag tag-susume">🥦 食材のススメ</span>
           <span class="article-list-title">ブロッコリーのススメ｜実は実力派、夏風邪シーズンに頼れる野菜</span>
           <span class="article-list-date">2026.05.23</span>
+        </a>
+        <a href="articles/cinnamon-benefits.html" class="article-list-item">
+          <span class="tag tag-susume">🍂 食材のススメ</span>
+          <span class="article-list-title">シナモンのススメ｜甘い香りに隠された、スパイスの抗酸化パワー</span>
+          <span class="article-list-date">2026.05.24</span>
         </a>
       </div>
     </div>
